@@ -1,0 +1,19 @@
+list1= [[1, 'a', ['cat'], 2], [[[3]], 'dog'], 4, 5]
+
+list2= []
+for i in list1:
+    if type(i)!=list:
+        list2.append(i)
+    else:
+        for x in i:
+            if type(x) != list:
+                list2.append(x)
+            else:
+                for y in x:
+                    if type(y) != list:
+                        list2.append(y)
+                    else:
+                        for z in y:
+                            if type(z) != list:
+                                list2.append(z)
+print(list2)
